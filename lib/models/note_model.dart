@@ -1,5 +1,3 @@
-import 'package:flutter/rendering.dart';
-
 class NoteModel {
   final String title;
   final String subTitle;
