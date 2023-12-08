@@ -26,7 +26,7 @@ class AddNewNote extends StatelessWidget {
                     height: 16,
                   ),
                   CustomTextField(
-                    hint: 'Contant',
+                    hint: 'Content',
                     maxlines: 5,
                   ),
                   SizedBox(

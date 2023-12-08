@@ -31,7 +31,10 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Appbar(),
+              Appbar(
+                title: "Notes",
+                icon: Icon(Icons.search_sharp),
+              ),
               Expanded(child: NotesListView()),
             ],
           ),
