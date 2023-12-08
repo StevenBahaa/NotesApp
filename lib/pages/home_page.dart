@@ -7,9 +7,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Scaffold(
-        body: Padding(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(Icons.add),
+        ),
+        body: const Padding(
           padding: EdgeInsets.symmetric(horizontal: 18, vertical: 18),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
