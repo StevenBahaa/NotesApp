@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/add_note_bottom_sheet.dart';
 import 'package:notes_app/widgets/app_bar.dart';
 import 'package:notes_app/widgets/notes_list_view.dart';
 
@@ -10,7 +11,19 @@ class HomePage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            showModalBottomSheet(
+                shape: const RoundedRectangleBorder(
+                  // <-- SEE HERE
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(25.0),
+                  ),
+                ),
+                context: context,
+                builder: (context) {
+                  return const AddNewNote();
+                });
+          },
           child: const Icon(Icons.add),
         ),
         body: const Padding(
